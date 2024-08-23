@@ -1,0 +1,192 @@
+body {
+    margin: 10px;
+    padding: auto;
+    color: rgb(236, 182, 111);
+}
+
+h1 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color:white;
+    background-color: black;
+}
+
+#left_antenna{
+    background-color: greenyellow;
+    height:20px;
+    width:10px;
+    border-radius: 50%;
+}
+#right_antenna{
+    background-color:brown;
+    height:20px;
+    width:10px;
+    border-radius: 50%;
+}
+.head,.stomach, .left_arm, .right_arm,.left_leg, .right_leg {
+    background-color:burlywood
+}
+
+.head {
+    width: 200px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 220px 220px 0 0;
+    margin-bottom: 10px;
+    position: relative;
+    animation: movehead 1s infinite;
+}
+
+.eyes {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+
+    
+}
+
+.left_eye, .right_eye {
+    width: 50px;
+    height: 50px;
+    border-radius: 80%;
+    background-color:aqua;
+}
+
+.upper_body {
+    width: 250px;
+    height: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left_arm, .right_arm {
+    width: 200px;
+    height: 150px;
+    border-radius: 130px 130px 130px 130px;
+    animation: moveleftarm 1s infinite;
+}
+
+.stomach {
+    width: 1200px;
+    height: 200px;
+    border-radius: 80px 80px 80px 80px;
+    margin: 0;
+    transition: width;
+    animation: movestomach 3s ease-in;
+}
+
+.lower_body {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0px;
+}
+
+.left_leg, .right_leg {
+    width: 50px;
+    height: 150px;
+    border-radius: 50px;
+}
+@keyframes movehead {
+    0% {
+        width: 180px;
+    }
+    25% {
+       width: 280px;
+    }
+    50% {
+        width:200px;
+    }
+    75% {
+        width:280px;
+    }
+    100% {
+        width: 180px;
+    }
+}
+
+
+@keyframes movestomach {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(180deg);
+    }
+    50% {
+        transform: rotate(360deg); 
+    }
+    75% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes moveleftarm {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(45deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+
+
+}
+@keyframes moverightarm {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes movelegs {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.left_leg, .right_leg {
+    width: 50px;
+    height: 150px;
+    border-radius: 50px;
+    animation: movelegs 1s infinite;
+}
